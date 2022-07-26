@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트</title>
+<style type="text/css">
+#box {
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	background-color: coral;
+}
+/* html요소들은 name이라는 속성을 갖을 수 있다 이건 아이디나 클래스랑 좀 다른데 
+   id or class는 css를 적용시킬려고 사용하는 느낌이 강하고 name은 JS를 사용하기 위해 쓰는 느낌이 강하다 */
+input[name="test"] { /* name으로 구별하기 */
+	border: 3px solid black;
+}
+</style>
+</head>
+<body>
+	<div id="box" onmouseover="func1(this)" onmouseout="func2(this)"></div>
+
+
+<script type="text/javascript">
+   function func1(obj){
+      obj.style.backgroundColor="lightblue";
+   }
+   
+   function func2(obj){
+      obj.style.backgroundColor="lightgray";
+   }
+</script>
+
+
+</body>
+</html>
+<!-- 	<input type="text" onkeydown="func(event)" name="test" placeholder="console 확인">
+	JS를 사용하기 위해 name 사용 onkeydown사용자의 입력을 트리거로 사용 -->
+<!--    function func(event){
+	   console.log(event.keyCode)/* 사용자가 입력한 값을 콘솔에 보여준다(아스키 코드로 보여줌) */
+	   /* 브라우저마다 JS해석가가 다르기 때문에 결과가 달라질 수 있다 */
+   } -->

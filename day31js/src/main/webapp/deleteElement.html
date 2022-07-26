@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	li{
+		border: 1px solid black;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	<ul id="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<!-- 2번을 지우기 위해선 li의 부모임 ul한테 부모야 자식li 제거해줄래? -->
+<script type="text/javascript">
+	var list=document.querySelectorAll('#list > li');
+	for(var i = 0; i<list.length;i++){
+		list[i].addEventListener('click',function(){
+			this.parentNode.removeChild(this); /* 부모를 찾아서 요소를 삭제 */
+		});
+	}
+</script>
+</body>
+</html>

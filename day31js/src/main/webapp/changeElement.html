@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+   li {
+      border: 1px solid black;
+      cursor: pointer;
+   }
+</style>
+</head>
+<body>
+<ul>
+   <li>1</li>
+   <li>2</li>
+   <li>3</li>
+   <li>4</li>
+   <li>5</li>
+</ul>
+
+<script type="text/javascript">
+   var ul=document.querySelector('ul');
+   var list=document.querySelectorAll('li');
+   for(var i=0;i<list.length;i++){
+      list[i].addEventListener('click',function(){
+         var elem=document.createElement('li');
+         var msg=document.createTextNode('선택한 리스트입니다.');
+         elem.appendChild(msg);
+         
+         ul.replaceChild(elem,this);
+      });
+   }
+</script>
+</body>
+</html>

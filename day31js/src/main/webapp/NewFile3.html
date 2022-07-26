@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>선택자</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function func(){
+		document.getElementById('test').style.backgroundColor="blue";
+		/* 아이디가 test인 것을 찾아서 스타일의 배경색깔을 파란색으로 해라 */
+		
+		var ele=document.getElementsByClassName('test2'); /* class이름이 test2인 거 다 찾아서 ele에 넣기(배열이라 elements) */
+		for(var i=0;i<ele.length;i++){/* 0부터 배열 사이즈만큼 반복 */
+			ele[i].style.backgroundColor='red'; /* 각요소의 스타일의 배경색깔을 빨간색으로 해라 */
+		}
+	}
+</script>
+
+<button type="button" onclick="func()">색깔 바꾸기</button>
+
+<ul>
+	<li>1</li>
+	<li class="test2">2</li>
+	<li id="test">3</li>
+	<li class='test2'>4</li>
+</ul>
+
+</body>
+</html>

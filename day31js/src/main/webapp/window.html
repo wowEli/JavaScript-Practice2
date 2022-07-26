@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window 객체</title>
+<style type="text/css">
+	button:hover{
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+
+<button>새 창 열기</button>
+<button>새 창 닫기</button>
+
+<script type="text/javascript">
+	var btn = document.querySelectorAll('button'); /* 위 버튼들을 배열에 하나씩 담기 */
+	var win; /* 스코프*/
+	btn[0].addEventListener('click',function(){ /* 첫번째 버튼을 누르면 함수실행 */
+		win = window.open('https://www.naver.com','_blank');/* 어떤 싸이트를 어떻게 열것인가를 넣어줘야함 */
+	});
+	btn[1].addEventListener('click',function(){ /* 두번째 버튼을 누르면 함수 실행 */
+		win.close();
+	});
+</script>
+</body>
+</html>
